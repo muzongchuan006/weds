@@ -31,5 +31,4 @@ services:
       strategy: recreate
     labels:
       io.rancher.container.requested_ip: "10.42.0.250"
-    publicEndpoints:
-      hostId: "1h17"
+    hostId: "1h17"

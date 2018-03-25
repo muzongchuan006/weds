@@ -12,22 +12,22 @@ version: '2'
       default: 10000
       type: "int"
     - variable: port_DevFileServer
-      description: "Public port for access to DailyCheckout service"
+      description: "Public port for access to DevFileServer service"
       required: true
       default: 8081
       type: "int"
     - variable: port_FrontendServer
-      description: "Public port for access to DailyCheckout service"
+      description: "Public port for access to FrontendServer service"
       required: true
       default: 8082
       type: "int"
     - variable: port_jtran_service
-      description: "Public port for access to DailyCheckout service"
+      description: "Public port for access to jtran_service service"
       required: true
       default: 5002
       type: "int"
     - variable: port_TradServer
-      description: "Public port for access to DailyCheckout service"
+      description: "Public port for access to TradServer service"
       required: true
       default: 10001
       type: "int"

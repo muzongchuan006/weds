@@ -1,9 +1,9 @@
 version: '2'
 .catalog:
-  name: "demo_test"
+  name: "APP_test"
   version: "v0.0.1"
-  description: "A demo for test."
-  uuid: demo-0
+  description: "APP for test."
+  uuid: APP-0
   minimum_rancher_version: v1.0.0
   questions:
     - variable: port_DailyCheckout

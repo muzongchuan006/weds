@@ -1,8 +1,8 @@
-name: DEMO_test 
+name: APP_test 
 description: |
-   service_demo
+   service_APP
 version:  1.0.0
-category:  demo
+category:  APP
 maintainer:  weds
-license: demo:v1.0.0
+license: APP:v1.0.0
 projectURL: https://github.com/muzongchuan006/demo

@@ -1,0 +1,31 @@
+version: '2'
+.catalog:
+  name: "demo_test"
+  version: "v0.0.1"
+  description: "A demo for test."
+  uuid: demo-0
+  minimum_rancher_version: v1.0.0
+  questions:
+    - variable: port_gateway
+      description: "Public port for access to  gateway service"
+      required: true
+      default: 5002
+      type: "int"
+    - variable: port_consume
+      description: "Public port for access to  consume service"
+      required: true
+      default: 6007
+      type: "int"
+
+services:
+  node:
+    scale: 1
+    start_on_create: true
+    health_check:
+      healthy_threshold: 1
+      response_timeout: 2000
+      port: 6007
+      port: 5002
+      unhealthy_threshold: 3
+      interval: 2000
+      strategy: recreate

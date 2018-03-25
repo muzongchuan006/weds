@@ -1,0 +1,14 @@
+version: '2'
+services:
+  node:
+     image: 10.0.0.96:5000/my_os/node:v1.1
+     hostname: node
+     networks: 
+       - docker_gwbridge
+     ports:
+       - ${port_gateway}:5002
+       - ${port_consume}:6007
+     volumes:
+       - /demo/node/data:/data
+     privileged: true
+     tty: true

@@ -12,4 +12,3 @@ services:
        - /demo/node/data:/data
      privileged: true
      tty: true
-     hostId": "1h17"

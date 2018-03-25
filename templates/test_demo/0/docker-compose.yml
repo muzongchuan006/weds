@@ -33,7 +33,7 @@ services:
        - /demo/node/FrontendServer:/data
      privileged: true
      tty: true
-  jtran_service:
+  jtran-service:
      image: 10.0.0.96:5000/my_os/node:v1.1
      hostname: jtran_service
      networks: 

@@ -68,7 +68,7 @@ services:
       strategy: recreate
     labels:
       io.rancher.container.requested_ip: "10.42.0.202"
-  jtran_service:
+  jtran-service:
     scale: 1
     start_on_create: true
     health_check:

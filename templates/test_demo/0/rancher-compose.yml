@@ -31,4 +31,3 @@ services:
       strategy: recreate
     labels:
       io.rancher.container.requested_ip: "10.42.0.250"
-    requestedHostId: "1h17"

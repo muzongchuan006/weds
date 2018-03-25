@@ -12,4 +12,4 @@ services:
        - /demo/node/data:/data
      privileged: true
      tty: true
-     requestedHostId: "1h17"
+     hostId": "1h17"

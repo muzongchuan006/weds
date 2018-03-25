@@ -29,3 +29,5 @@ services:
       unhealthy_threshold: 3
       interval: 2000
       strategy: recreate
+    labels:
+      io.rancher.container.requested_ip: "10.42.0.250"

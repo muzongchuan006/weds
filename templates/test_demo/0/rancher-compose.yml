@@ -32,4 +32,4 @@ services:
     labels:
       io.rancher.container.requested_ip: "10.42.0.250"
     publicEndpoints:
-      ipAddress: "10.0.0.102"
+      hostId: "1h17"

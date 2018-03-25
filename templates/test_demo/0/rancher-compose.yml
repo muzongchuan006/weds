@@ -11,25 +11,21 @@ version: '2'
       required: true
       default: 10000
       type: "int"
-  questions:
     - variable: port_DevFileServer
       description: "Public port for access to DailyCheckout service"
       required: true
       default: 8081
       type: "int"
-  questions:
     - variable: port_FrontendServer
       description: "Public port for access to DailyCheckout service"
       required: true
       default: 8082
       type: "int"
-  questions:
     - variable: port_jtran_service
       description: "Public port for access to DailyCheckout service"
       required: true
       default: 5002
       type: "int"
-  questions:
     - variable: port_TradServer
       description: "Public port for access to DailyCheckout service"
       required: true

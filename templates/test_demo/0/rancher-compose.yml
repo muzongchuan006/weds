@@ -6,28 +6,93 @@ version: '2'
   uuid: demo-0
   minimum_rancher_version: v1.0.0
   questions:
-    - variable: port_gateway
-      description: "Public port for access to  gateway service"
+    - variable: port_DailyCheckout
+      description: "Public port for access to DailyCheckout service"
+      required: true
+      default: 10000
+      type: "int"
+  questions:
+    - variable: port_DevFileServer
+      description: "Public port for access to DailyCheckout service"
+      required: true
+      default: 8081
+      type: "int"
+  questions:
+    - variable: port_FrontendServer
+      description: "Public port for access to DailyCheckout service"
+      required: true
+      default: 8082
+      type: "int"
+  questions:
+    - variable: port_jtran_service
+      description: "Public port for access to DailyCheckout service"
       required: true
       default: 5002
       type: "int"
-    - variable: port_consume
-      description: "Public port for access to  consume service"
+  questions:
+    - variable: port_TradServer
+      description: "Public port for access to DailyCheckout service"
       required: true
-      default: 6007
+      default: 10001
       type: "int"
-
 services:
-  node:
+  DailyCheckout:
     scale: 1
     start_on_create: true
     health_check:
       healthy_threshold: 1
       response_timeout: 2000
-      port: 6007
+      port: 10000
+      unhealthy_threshold: 3
+      interval: 2000
+      strategy: recreate
+    labels:
+      io.rancher.container.requested_ip: "10.42.0.200"
+  DevFileServer:
+    scale: 1
+    start_on_create: true
+    health_check:
+      healthy_threshold: 1
+      response_timeout: 2000
+      port: 8081
+      unhealthy_threshold: 3
+      interval: 2000
+      strategy: recreate
+    labels:
+      io.rancher.container.requested_ip: "10.42.0.201"
+  FrontendServer:
+    scale: 1
+    start_on_create: true
+    health_check:
+      healthy_threshold: 1
+      response_timeout: 2000
+      port: 8082
+      unhealthy_threshold: 3
+      interval: 2000
+      strategy: recreate
+    labels:
+      io.rancher.container.requested_ip: "10.42.0.202"
+  jtran_service:
+    scale: 1
+    start_on_create: true
+    health_check:
+      healthy_threshold: 1
+      response_timeout: 2000
       port: 5002
       unhealthy_threshold: 3
       interval: 2000
       strategy: recreate
     labels:
-      io.rancher.container.requested_ip: "10.42.0.250"
+      io.rancher.container.requested_ip: "10.42.0.203"
+  TradServer:
+    scale: 1
+    start_on_create: true
+    health_check:
+      healthy_threshold: 1
+      response_timeout: 2000
+      port: 10001
+      unhealthy_threshold: 3
+      interval: 2000
+      strategy: recreate
+    labels:
+      io.rancher.container.requested_ip: "10.42.0.204"

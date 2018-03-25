@@ -1,20 +1,57 @@
 version: '2'
 services:
-  node:
+  DailyCheckout:
      image: 10.0.0.96:5000/my_os/node:v1.1
-     hostname: node
+     hostname: DailyCheckout
      networks: 
        - docker_gwbridge
      ports:
-       - ${port_gateway}:5002
-       - ${port_consume}:6007
+       - ${port_DailyCheckout}:${port_DailyCheckout}
      volumes:
-       - /demo/node/data:/data
+       - /demo/node/DailyCheckout:/data
      privileged: true
      tty: true
-
-
-
-
-
-
+  DevFileServer:
+     image: 10.0.0.96:5000/my_os/node:v1.1
+     hostname: DevFileServer
+     networks: 
+       - docker_gwbridge
+     ports:
+       - ${port_DevFileServer}:${port_DevFileServer}
+     volumes:
+       - /demo/node/DevFileServer:/data
+     privileged: true
+     tty: true
+  FrontendServer:
+     image: 10.0.0.96:5000/my_os/node:v1.1
+     hostname: FrontendServer
+     networks: 
+       - docker_gwbridge
+     ports:
+       - ${port_FrontendServer}:${port_FrontendServer}
+     volumes:
+       - /demo/node/FrontendServer:/data
+     privileged: true
+     tty: true
+  jtran_service:
+     image: 10.0.0.96:5000/my_os/node:v1.1
+     hostname: jtran_service
+     networks: 
+       - docker_gwbridge
+     ports:
+       - ${port_jtran_service}:${port_jtran_service}
+     volumes:
+       - /demo/node/jtran_service:/data
+     privileged: true
+     tty: true
+  TradServer:
+     image: 10.0.0.96:5000/my_os/node:v1.1
+     hostname: TradServer
+     networks: 
+       - docker_gwbridge
+     ports:
+       - ${port_TradServer}:${port_TradServer}
+     volumes:
+       - /demo/node/TradServer:/data
+     privileged: true
+     tty: true

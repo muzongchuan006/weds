@@ -55,3 +55,25 @@ services:
        - /demo/node/TradServer:/data
      privileged: true
      tty: true
+  FlatCard:
+     image: 10.0.0.96:5000/my_os/node:v1.1
+     hostname: FlatCard
+     networks: 
+       - docker_gwbridge
+     ports:
+       - ${port_FlatCard}:${port_FlatCard}
+     volumes:
+       - /demo/node/FlatCard:/data
+     privileged: true
+     tty: true
+  Online-xf:
+     image: 10.0.0.96:5000/my_os/node:v1.1
+     hostname: Online-xf
+     networks: 
+       - docker_gwbridge
+     ports:
+       - ${port_Online-xf}:${port_Online-xf}
+     volumes:
+       - /demo/node/Online-xf:/data
+     privileged: true
+     tty: true

@@ -31,6 +31,16 @@ version: '2'
       required: true
       default: 10001
       type: "int"
+    - variable: port_FlatCard
+      description: "Public port for access to FlatCard service"
+      required: true
+      default: 10002
+      type: "int"
+    - variable: port_Online-xf
+      description: "Public port for access to Online-xf service"
+      required: true
+      default: 10003
+      type: "int"
 services:
   DailyCheckout:
     scale: 1

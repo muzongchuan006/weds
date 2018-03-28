@@ -41,6 +41,16 @@ version: '2'
       required: true
       default: 10003
       type: "int"
+    - variable: port_jmsg_service
+      description: "Public port for access to port_jmsg_service service"
+      required: true
+      default: 10004
+      type: "int"
+    - variable: port_dev-tran-service
+      description: "Public port for access to port_dev-tran-service service"
+      required: true
+      default: 10005
+      type: "int"
 services:
   DailyCheckout:
     scale: 1
@@ -126,3 +136,27 @@ services:
       strategy: recreate
     labels:
       io.rancher.container.requested_ip: "10.42.0.206"
+  jmsg-service:
+    scale: 1
+    start_on_create: true
+    health_check:
+      healthy_threshold: 1
+      response_timeout: 2000
+      port: 10004
+      unhealthy_threshold: 3
+      interval: 2000
+      strategy: recreate
+    labels:
+      io.rancher.container.requested_ip: "10.42.0.207"
+  dev-tran-service:
+    scale: 1
+    start_on_create: true
+    health_check:
+      healthy_threshold: 1
+      response_timeout: 2000
+      port: 10005
+      unhealthy_threshold: 3
+      interval: 2000
+      strategy: recreate
+    labels:
+      io.rancher.container.requested_ip: "10.42.0.208"

@@ -77,3 +77,25 @@ services:
        - /demo/node/Online-xf:/data
      privileged: true
      tty: true
+  jmsg-service:
+     image: 10.0.0.96:5000/my_os/node:v1.1
+     hostname: jmsg-service
+     networks: 
+       - docker_gwbridge
+     ports:
+       - ${port_jmsg_service}:${port_jmsg_service}
+     volumes:
+       - /demo/node/jmsg-service:/data
+     privileged: true
+     tty: true
+  dev-tran-service:
+     image: 10.0.0.96:5000/my_os/node:v1.1
+     hostname: dev-tran-service
+     networks: 
+       - docker_gwbridge
+     ports:
+       - ${port_dev-tran-service}:${port_dev-tran-service}
+     volumes:
+       - /demo/node/dev-tran-service:/data
+     privileged: true
+     tty: true

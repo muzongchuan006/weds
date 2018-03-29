@@ -49,7 +49,7 @@ version: '2'
     - variable: port_dev-tran-service
       description: "Public port for access to port_dev-tran-service service"
       required: true
-      default: 10005
+      default: 5001
       type: "int"
 services:
   DailyCheckout:
@@ -154,7 +154,7 @@ services:
     health_check:
       healthy_threshold: 1
       response_timeout: 2000
-      port: 10005
+      port: 5001
       unhealthy_threshold: 3
       interval: 2000
       strategy: recreate

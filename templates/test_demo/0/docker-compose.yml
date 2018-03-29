@@ -72,7 +72,7 @@ services:
      networks: 
        - docker_gwbridge
      ports:
-       - ${port_Online-xf}:${port_Online-xf}
+       - ${port_Online_xf}:${port_Online_xf}
      volumes:
        - /demo/node/Online-xf:/data
      privileged: true
@@ -94,7 +94,7 @@ services:
      networks: 
        - docker_gwbridge
      ports:
-       - ${port_dev-tran-service}:${port_dev-tran-service}
+       - ${port_dev_tran_service}:${port_dev_tran_service}
      volumes:
        - /demo/node/dev-tran-service:/data
      privileged: true

@@ -14,12 +14,12 @@ version: '2'
     - variable: port_DevFileServer
       description: "Public port for access to DevFileServer service"
       required: true
-      default: 8081
+      default: 8082
       type: "int"
     - variable: port_FrontendServer
       description: "Public port for access to FrontendServer service"
       required: true
-      default: 8082
+      default: 8081
       type: "int"
     - variable: port_jtran_service
       description: "Public port for access to jtran_service service"

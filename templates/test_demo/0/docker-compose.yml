@@ -25,7 +25,7 @@ services:
      ports:
        - ${port_DevFileServer}:${port_DevFileServer}
      volumes:
-       - /demo/node/DevFileServer:/data
+       - /demo/node/devfile-jtran:/data
      privileged: true
      tty: true
   FrontendServer:
@@ -53,7 +53,7 @@ services:
      ports:
        - ${port_jtran_service}:${port_jtran_service}
      volumes:
-       - /demo/node/jtran_service:/data
+       - /demo/node/devfile-jtran:/data
      privileged: true
      tty: true
   TradServer:

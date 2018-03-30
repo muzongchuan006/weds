@@ -52,6 +52,8 @@ services:
        - docker_gwbridge
      ports:
        - ${port_jtran_service}:${port_jtran_service}
+       - ${port_DevFileServer}:${port_DevFileServer}
+       - "5003:5003"
      volumes:
        - /demo/node/devfile-jtran:/data
      privileged: true

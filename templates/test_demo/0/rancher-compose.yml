@@ -55,108 +55,45 @@ services:
   DailyCheckout:
     scale: 1
     start_on_create: true
-    health_check:
-      healthy_threshold: 1
-      response_timeout: 2000
-      port: 10000
-      unhealthy_threshold: 3
-      interval: 2000
-      strategy: recreate
     labels:
       io.rancher.container.requested_ip: "10.42.0.200"
   DevFileServer:
     scale: 1
     start_on_create: true
-    health_check:
-      healthy_threshold: 1
-      response_timeout: 2000
-      port: 8081
-      unhealthy_threshold: 3
-      interval: 2000
-      strategy: recreate
     labels:
       io.rancher.container.requested_ip: "10.42.0.201"
   FrontendServer:
     scale: 1
     start_on_create: true
-    health_check:
-      healthy_threshold: 1
-      response_timeout: 2000
-      port: 8082
-      unhealthy_threshold: 3
-      interval: 2000
-      strategy: recreate
     labels:
       io.rancher.container.requested_ip: "10.42.0.202"
   jtran-service:
     scale: 1
     start_on_create: true
-    health_check:
-      healthy_threshold: 1
-      response_timeout: 2000
-      port: 5002
-      unhealthy_threshold: 3
-      interval: 2000
-      strategy: recreate
     labels:
       io.rancher.container.requested_ip: "10.42.0.203"
   TradServer:
     scale: 1
     start_on_create: true
-    health_check:
-      healthy_threshold: 1
-      response_timeout: 2000
-      port: 10001
-      unhealthy_threshold: 3
-      interval: 2000
-      strategy: recreate
     labels:
       io.rancher.container.requested_ip: "10.42.0.204"
   FlatCard:
     scale: 1
     start_on_create: true
-    health_check:
-      healthy_threshold: 1
-      response_timeout: 2000
-      port: 10002
-      unhealthy_threshold: 3
-      interval: 2000
-      strategy: recreate
     labels:
       io.rancher.container.requested_ip: "10.42.0.205"
   Online-xf:
     scale: 1
     start_on_create: true
-    health_check:
-      healthy_threshold: 1
-      response_timeout: 2000
-      port: 10003
-      unhealthy_threshold: 3
-      interval: 2000
-      strategy: recreate
     labels:
       io.rancher.container.requested_ip: "10.42.0.206"
   jmsg-service:
     scale: 1
     start_on_create: true
-    health_check:
-      healthy_threshold: 1
-      response_timeout: 2000
-      port: 10004
-      unhealthy_threshold: 3
-      interval: 2000
-      strategy: recreate
     labels:
       io.rancher.container.requested_ip: "10.42.0.207"
   dev-tran-service:
     scale: 1
     start_on_create: true
-    health_check:
-      healthy_threshold: 1
-      response_timeout: 2000
-      port: 5001
-      unhealthy_threshold: 3
-      interval: 2000
-      strategy: recreate
     labels:
       io.rancher.container.requested_ip: "10.42.0.208"

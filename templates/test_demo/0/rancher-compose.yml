@@ -46,6 +46,11 @@ version: '2'
       required: true
       default: 10004
       type: "int"
+    - variable: port_jmsg_monitor
+      description: "Public port for access to port_jmsg_monitor service"
+      required: true
+      default: 10005
+      type: "int"
     - variable: port_dev_tran_service
       description: "Public port for access to port_dev-tran-service service"
       required: true

@@ -110,6 +110,7 @@ services:
        - docker_gwbridge
      ports:
        - ${port_jmsg_service}:${port_jmsg_service}
+       - ${port_jmsg_monitor}:${port_jmsg_monitor}
      volumes:
        - /demo/node/jmsg-service:/data
      privileged: true
